@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don’t think. Just draw</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/game2.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0;
+    background-color: #f5f7fa;
+    color: #333;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px; /* Set a max width for the container */
+    box-sizing: border-box;
+    margin: 50px auto;
+}
+
+#drawingCanvas {
+    border: 2px solid #4a90e2;
+    margin-top: 10px;
+    cursor: crosshair;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #4a90e2;
+}
+
+a {
+    margin-top: 20px;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Don’t think. Just draw</h1>
+    <p id="prompt">Draw something that makes you smile!</p>
+    <canvas id="drawingCanvas" width="400" height="400"></canvas>
+    <button onclick="startChallenge()">Start Challenge</button>
+    <p id="timer"></p>
+    <p id="message"></p>
+    <a href="couns2.html" target="_blank">let's Challenge</a>
+</div>
+</div>
+
+<script>
+    const prompts = [
+        "Draw something that makes you smile!",
+        "Draw your favorite animal!",
+        "Draw a happy place!",
+        "Draw something you love!",
+        "Draw a fun memory!"
+    ];
+
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+    let timeLeft = 30; // 30-second timer
+    let timerInterval;
+
+    // Change the prompt text randomly
+    function getRandomPrompt() {
+        const randomIndex = Math.floor(Math.random() * prompts.length);
+        document.getElementById("prompt").innerText = prompts[randomIndex];
+    }
+
+    // Start the challenge
+    function startChallenge() {
+        getRandomPrompt();
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+        document.getElementById("message").innerText = ""; // Clear previous message
+        timeLeft = 30;
+        document.getElementById("timer").innerText = `Time left: ${timeLeft}s`;
+        clearInterval(timerInterval); // Reset timer if running
+        timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    // Update the timer every second
+    function updateTimer() {
+        timeLeft--;
+        document.getElementById("timer").innerText = `Time left: ${timeLeft}s`;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            endChallenge();
+        }
+    }
+
+    // End the challenge and display a positive message
+    function endChallenge() {
+        document.getElementById("message").innerText = "Great job! Creativity flows from you!";
+    }
+
+    // Draw on canvas
+    canvas.addEventListener('mousedown', (e) => {
+        drawing = true;
+        ctx.beginPath();
+        ctx.moveTo(e.offsetX, e.offsetY);
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (drawing) {
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+        }
+    });
+
+    canvas.addEventListener('mouseup', () => {
+        drawing = false;
+        ctx.closePath();
+    });
+
+    canvas.addEventListener('mouseout', () => {
+        drawing = false;
+        ctx.closePath();
+    });
+</script>
+
+</body>
+</html>

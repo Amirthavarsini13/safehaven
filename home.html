@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety Platform - Home</title>
+    <link rel="icon" href="C:\Users\Swathi Dharsan\Desktop\MP-III\images\logo.jpeg" type="image/png">
+    <style>
+        /* General reset and styles */
+        * /* General reset and styles */
+*/* General reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Fallback color */
+    background-image: url('images/background.jpg'); /* Corrected syntax */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Header styling */
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent background for better readability */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    min-width:900px;
+    max-height:60px;
+}
+
+h1 {
+    margin-left: 90px;
+    font-size: 28px; /* Increased font size for header */
+    color: #fff; /* Header text color */
+    font-weight: bold; /* Make the header bold */
+    word-spacing: 4px; /* Adjust spacing between words */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* Changed link color to white */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; /* Adjusted font size for links */
+    transition: color 0.3s ease-in-out; /* Smooth color change */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #ffd700; /* Changes to gold on hover */
+}
+
+/* Main content styling */
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the portal is centered vertically */
+}
+
+/* Portal container */
+.portal-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-wrap: wrap;
+    gap: 150px;
+    max-width: 1000px;
+    margin: 10 auto;
+}
+
+.portal-box {
+    width: 180px; /* Width of the portal box */
+    height: 250px; /* Specify the height of each portal box */
+    text-align: center; /* Center text horizontally */
+    padding: 20px;
+    background-color: rgb(237, 226, 226);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover effects */
+    animation: portal-entry 0.8s ease forwards; /* Trigger on load */
+}
+
+.portal-box img {
+    width: 100%; /* Make the image take the full width of the box */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-height: 150px; /* Set a maximum height for the image to prevent overflow */
+    object-fit: cover; /* Crop the image to cover the box while maintaining aspect ratio */
+    border-radius: 5px; /* Keep the border radius */
+    transition: transform 0.3s ease; /* Smooth transition on image zoom */
+}
+
+.portal-box h3 {
+    margin-top: 10px; /* Adjust margin for heading */
+    font-weight: bold; /* Make heading bold */
+    font-size: 20px; /* Adjust font size for the heading */
+    color: #333; /* Heading text color */
+}
+
+.portal-box p {
+    font-weight: bold; /* Make paragraph text bold */
+    font-size: 14px; /* Adjust font size for the paragraph */
+    margin-top: 10px; /* Add space above paragraph */
+    color: #666; /* Paragraph text color */
+}
+
+/* Hover effects and animations */
+.portal-box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.portal-box:hover img {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+/* Keyframe animation for portal boxes when loading */
+@keyframes portal-entry {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.bold-text {
+    font-weight: bold;
+}
+
+
+/* Section styling */
+   /* Section styling */
+section h2 {
+    font-size: 45px;
+    padding: 50px; 
+    text-align: left; /* Changed to left align */
+    color: #0f0f0f; /* Section text color */
+    margin-left: 150px; /* Added left margin */
+}
+
+
+
+
+section p {
+    font-size: 20px; /* Font size for section paragraphs */
+    color: #f8f8fa; /* Color for section paragraphs */
+    word-spacing: 5px; /* Adjust spacing between words */
+   line-height: 50px;
+   margin-right: 400px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    font-size: 14px; /* Footer font size */
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SAFEHAVEN</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section style="padding: 50px; text-align: center;">
+            <h2 style="font-weight: bold;">Welcome to SafeHaven</h2>
+            <p class="text">SafeHaven is your trusted partner in ensuring women's safety and empowerment. Our platform connects you with resources, support, and community initiatives dedicated to your safety and well-being.</p>
+        </section>
+        
+        <div class="portal-container">
+            <div class="portal-box">
+                <a href="couns front.html">
+                    <img src="images/counselor.jpg" alt="Counselor Portal" />
+                    <h3>Counselor</h3>
+                </a>
+            </div>
+            <div class="portal-box">
+                <a href="ngo.html">
+                    <img src="images/ngo.jpg" alt="NGO Portal" />
+                    <h3>NGO</h3>
+                </a>
+            </div>
+               <div class="portal-box">
+                <a href="user.html">
+                    <img src="images/user.jpg" alt="User Portal" />
+                    <h3>User</h3>
+                </a>
+            </div>
+        </div>
+        
+    </main>
+    <footer style="background-color: rgba(76, 175, 80, 0.8); color: white; padding: 10px; text-align: center;">
+        <p>&copy; 2024 SafeHaven. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

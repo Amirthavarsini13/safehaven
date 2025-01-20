@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Self-Care Toolkit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('images/couns2.jpg'); /* Background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f7fa;
+            color: #333;
+            gap: 40px; /* Space between sections */
+        }
+        
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #4a90e2;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #357ABD;
+        }
+        /* Styling for each section */
+        .section-box {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Daily Self-Care Check-In -->
+<div class="container">
+    <h1>Daily Self-Care Check-In</h1>
+    <label for="moodSelect">How are you feeling today?</label>
+    <select id="moodSelect">
+        <option value="happy">Happy</option>
+        <option value="stressed">Stressed</option>
+        <option value="tired">Tired</option>
+        <option value="anxious">Anxious</option>
+        <option value="neutral">Neutral</option>
+    </select>
+    <button onclick="showSuggestion()">Get Suggestion</button>
+    <p id="suggestionText"></p>
+</div>
+
+<!-- Mind Boosters -->
+<div class="container">
+    <h1>Mind Boosters</h1>
+    <button onclick="showMindBooster()">Boost My Mood</button>
+    <p id="boosterText"></p>
+    <a href="game2.html" target="_blank">Quick Draw Creativity Challenge</a>
+</div>
+</div>
+
+<script>
+    function showSuggestion() {
+        const mood = document.getElementById("moodSelect").value;
+        const suggestionText = document.getElementById("suggestionText");
+        suggestionText.innerText = suggestSelfCare(mood);
+    }
+
+    function suggestSelfCare(mood) {
+        switch(mood) {
+            case "happy":
+                return "Keep that positivity going! Try sharing your happiness with someone close.";
+            case "stressed":
+                return "Take a few deep breaths, and consider a quick 10-minute meditation.";
+            case "tired":
+                return "Make sure to take breaks, hydrate, and consider a short nap if possible.";
+            case "anxious":
+                return "Try grounding exercises or a calming tea to help you feel more centered.";
+            case "neutral":
+                return "How about a nice walk or listening to your favorite song?";
+            default:
+                return "Take some time for yourself.";
+        }
+    }
+
+    function showMindBooster() {
+        const boosterText = document.getElementById("boosterText");
+        boosterText.innerText = generateMindBooster();
+    }
+
+    function generateMindBooster() {
+        const boosters = [
+            "You are stronger than you know!",
+            "Take a deep breath – you’ve got this!",
+            "Enjoy your favorite song or relaxing music.",
+            "Watch a funny video or read a favorite book.",
+            "Remind yourself that tough times don’t last, but you do."
+        ];
+        return boosters[Math.floor(Math.random() * boosters.length)];
+    }
+</script>
+
+</body>
+</html>
