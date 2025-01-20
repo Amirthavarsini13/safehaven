@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>SAFEHAVEN - About</title>
+    <link rel="icon" href="C:\Users\Swathi Dharsan\Desktop\MP-III\images\logo.jpeg" type="image/png">
+    <style>
+        /* General reset and styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Fallback color */
+            background-image: url('images/about.jpg'); /* Corrected syntax */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+
+        header {
+            background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent background for better readability */
+            color: rgb(240, 236, 236);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            min-width: 900px;
+            max-height: 60px;
+        }
+
+        h1 {
+            margin-left: 90px;
+            font-size: 28px;
+            color: #fdfdff; /* Changed h1 color to a deep blue */
+            font-weight: bold;
+            word-spacing: 4px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #222222; /* Changed h2 color to a vibrant red */
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333333; /* Changed p text color to dark grey */
+        }
+    
+
+        main {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 150vh; /* Ensures the portal is centered vertically */
+            max-height: 100vh; /* Restricts the height to the viewport */
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 10px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255); /* Changed link color to white */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px; /* Adjusted font size for links */
+            transition: color 0.3s ease-in-out; /* Smooth color change */
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #ffd700; /* Changes to gold on hover */
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap; /* Allow boxes to wrap onto the next line if needed */
+            justify-content: space-between; /* Even spacing between boxes */
+        }
+
+        .box {
+            background: rgba(248, 246, 246, 0.9);
+            padding: 10px; /* Reduced padding */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px; /* Margin for spacing */
+            flex: 1 1 calc(30% - 20px); /* Take up 30% of the container width with space */
+            min-height: 200px; /* Reduced minimum height for each box */
+            max-width: 900px; /* Reduced maximum width for each box */
+            word-spacing: 3px;
+            line-height: 28px;
+        }
+
+        .team-content {
+            display: flex;
+            justify-content: center; /* Center team member boxes */
+            flex-wrap: wrap; /* Allow team members to wrap onto the next line */
+            padding: 50px 0; /* Add padding for spacing */
+            margin-top:5px;
+        }
+        /* Adjust the team-member container */
+.team-member {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center the image and text */
+    justify-content: center; /* Vertically center the content */
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Zoom and animation effect on hover */
+.team-member img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for team member text */
+.team-member p {
+    font-size: 10px;
+    color: #0e0e0e;
+    margin-top: 30px;
+}
+.team-member h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 5px 0; /* Reduce top margin to bring it closer to the image */
+}
+
+.team-member img {
+    width: 180px;
+    height: 200px;
+    margin-bottom: 5px; /* Reduced bottom margin */
+    border-radius: 20%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+        .team-member p {
+            font-size: 16px;
+            color: #555;
+        }
+        .bold-text {
+    font-weight: bold;
+}
+
+        footer {
+    background-color:rgba(76, 175, 80, 0.8); /* Change footer background to white */
+    color: white;  /* Change text color to match your theme */
+    padding: 10px;
+    text-align: center;
+    font-size: 14px; /* Footer font size */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SAFEHAVEN</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="box">
+                <h2>Our Story</h2>
+                <p>SafeHaven was founded with the mission to create a society where women feel safe, valued, and empowered. Our journey began in [Year] when [Founder Name] experienced [brief personal story that led to the founding]. Since then, we have grown to serve a diverse community of women.</p>
+            </div>
+
+            <div class="box">
+                <h2>Our Mission & Vision</h2>
+                <p><strong>Mission:</strong> We strive to provide a supportive community, resources, and tools to protect women's rights and promote gender equality.
+                    Our mission is to empower them through education, economic empowerment, advocacy, 
+                    and community engagement, promoting social change and gender equality..</p>
+                <p><strong>Vision:</strong> A world where women can live without fear of violence, harassment, or discrimination.we envision a world where women and girls 
+                    thrive, free from violence and inequality. </p>
+            </div>
+
+            <div class="box">
+                <h2>Objectives</h2>
+                <p>
+                    1. Provide a safe and confidential space for women to share their experiences and concerns.<br>
+                    2. Offer resources, support, and guidance for women facing violence, harassment, or abuse.<br>
+                    3. Educate and raise awareness about women's safety and gender equality.<br>
+                    4. Collaborate with organizations to promote policy changes and advocacy.<br>
+                    5. Empower women to take control of their safety and well-being.
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>Impacts</h2>
+                <p>
+                    
+
+                    1. Increased confidence and self-esteem<br>
+                    2. Improved education and career opportunities<br>
+                    3. Enhanced economic independence<br>
+                    4. Better health and well-being<br>
+                    5. Stronger decision-making and leadership skills<br>
+                    6. Greater participation in politics and civic engagement<br>
+                    7. Improved family and community relationships<br>
+                    8. Reduced poverty and vulnerability<br>
+                    9. Increased access to resources and services<br>
+                    10. Empowerment to break free from violence and abuse
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>The Heads</h2>
+                <div class="team-content">
+                    <div class="team-member">
+                        <img src="images/developer1.jpg" alt="Developer 1">
+                        <p><strong>UI/UX Designer</strong></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/developer2.jpg" alt="Developer 2">
+                        <p><strong>Website Creator</strong></p>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/developer3.jpg" alt="Developer 3">
+                        <p><strong>Content Creator</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+    </main>
+
+    <footer style="background-color:rgba(76, 175, 80, 0.8); color: rgb(194, 200, 194); padding: 10px; text-align: center;">
+        <p>&copy; 2024 SafeHaven. All rights reserved.</p>
+    </footer>
+    </body>
+        
+</html>
